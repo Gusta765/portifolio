@@ -1,0 +1,39 @@
+GUSTAVO BARBOSA
+(35) 98817-1660 | Poços de Caldas, MG | gustavobarbosa7744@gmail.com LinkedIn: linkedin.com/in/gustavo-barbosa-868976236/ | GitHub: github.com/Gusta765
+RESUMO PROFISSIONAL
+Analista de Dados com foco em Business Intelligence (BI) e modelagem de dados, buscando contribuir para a área de Business Analytics/MIS do Bradesco. Experiência na extração e tratamento de dados (SQL), construção de painéis em Power BI/Tableau e aplicação de técnicas de visualização para gerar insights acionáveis. Foco em ganho de eficiência, aprimoramento de controles e melhoria da experiência do cliente. Possui formação sólida em Engenharia e perfil proativo para atuar na curadoria e governança de dados e modelos.
+Disponibilidade para modelo de trabalho Híbrido em São Paulo - SP.
+EXPERIÊNCIA PROFISSIONAL
+Analista de Dados | Natusfarma (09/2024 - Atual)
+* Liderança no desenvolvimento e manutenção de painéis estratégicos em Power BI, aplicando conceitos de visualização de dados para monitorar KPIs e apoiar a liderança.
+* Realização de extração e tratamento de dados (SQL e Python), aplicando técnicas de modelagem para garantir a consistência e a confiabilidade das informações apresentadas.
+* Atuação na proposição de indicadores e dashboards que habilitam insights de valor, focando na melhoria de processos e da experiência do cliente.
+* Monitoramento de indicadores de negócio e técnicos, identificando anomalias e padrões para gerar valor à área comercial.
+Analista de Estoque (Foco em Dados) | Proluminas (09/2020 - 09/2024)
+* Curadoria e tratamento de grandes volumes de dados de inventário (SQL, Excel), assegurando a qualidade e consistência das bases.
+* Implementação de estratégias de segmentação de portfólio (Curva ABC) usando SQL, otimizando processos e gerando insights de eficiência operacional.
+* Desenvolvimento de projetos de automação (Python, SQL) para a geração de relatórios e rotinas de acompanhamento, aumentando a confiabilidade e a eficiência da gestão da informação.
+HABILIDADES TÉCNICAS
+* Banco de Dados/Extração: SQL Avançado (Transact-SQL), Python (Pandas), Excel Avançado.
+* Visualização e BI: Power BI (Modelagem de Dados e Dashboards), Tableau (Conhecimento Básico).
+* Modelagem e Curadoria: Conceitos de Modelagem de Dados, Curadoria de Dados e Governança.
+* Linguagens (Conhecimento Básico, Requisito): Python (Básico), SQL (Básico).
+* Cloud: Noções de Cloud (Azure/AWS) - através de estudos e projetos pessoais.
+* Idiomas: Inglês Intermediário.
+PROJETOS RELEVANTES
+Código Automatizado em SQL para Monitoramento de Estoque (Modelagem e Eficiência)
+* Projeto de automação usando SQL para monitorar e segmentar produtos, demonstrando habilidade na implementação de tecnologias para gestão da informação e ganho de eficiência.
+* Link: github.com/Gusta765/Analise_pareto_SQL
+Análise de Padrões e Clusterização com Python (Insights e Modelos)
+* Projeto de clusterização utilizando Python para reclassificar a árvore mercadológica, demonstrando a aplicação de modelos para identificar anomalias e padrões.
+* Link: github.com/Gusta765/Classificando-Produtos-Levenshtein-
+Relatórios de Indicadores Comerciais (Visualização e Apresentação)
+* Desenvolvimento de dashboards interativos em Power BI para monitoramento de KPIs, com foco na proposição de melhores gráficos e na elaboração de apresentações para a liderança.
+FORMAÇÃO ACADÊMICA
+Bacharelado em Engenharia da Computação | UNICV
+* (Cursando, previsão de conclusão: 06/2027)
+Master of Data Science Certificate | Datascy, Sydney, Austrália
+* (Concluído, 2021)
+Técnico em Administração | SENAC
+* (Concluído)
+

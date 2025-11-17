@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gustavo Barbosa - Portfólio Profissional</title>
+
+    <!-- Fonte e Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <style>
+        html { scroll-behavior: smooth; }
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #1e3a8a;
+            --bg: #f3f4f6;
+            --card: #ffffff;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --radius: 18px;
+            --shadow-strong: 0 25px 50px rgba(0,0,0,0.15);
+            --shadow-soft: 0 10px 20px rgba(0,0,0,0.10);
+        }
+
+        /* DARK THEME */
+        [data-theme="dark"] {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --shadow-strong: 0 25px 50px rgba(0,0,0,0.55);
+            --shadow-soft: 0 10px 20px rgba(0,0,0,0.35);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Inter", sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* HEADER HERO */
+        header {
+            padding: 6rem 1rem 7rem;
+            background: linear-gradient(135deg, #1e40af, #3b82f6, #06b6d4);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.20), transparent 60%),
+                        radial-gradient(circle at 80% 10%, rgba(255,255,255,0.15), transparent 65%),
+                        radial-gradient(circle at 50% 100%, rgba(255,255,255,0.12), transparent 70%);
+            z-index: 0;
+            opacity: 0.8;
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.9);
+            box-shadow: var(--shadow-strong);
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+        }
+
+        .hero p {
+            margin-top: 0.7rem;
+            font-size: 1.25rem;
+            opacity: 0.95;
+        }
+
+        /* CALL TO ACTION BUTTONS */
+        .cta {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.85rem 1.4rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.25s ease;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1e40af;
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255,255,255,0.7);
+            color: white;
+            background: transparent;
+        }
+
+        .btn:hover { transform: translateY(-4px); }
+
+        /* SECTIONS */
+        section {
+            padding: 5rem 1rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 2.4rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        /* SKILLS / FEATURE CARDS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .skill-card i {
+            font-size: 2.7rem;
+            margin-bottom: 1.2rem;
+            color: var(--primary);
+        }
+
+        /* PORTFOLIO */
+        .portfolio-grid {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            background: var(--card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tag {
+            background: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* EXPERIENCE */
+        .experience-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .exp-card {
+            background: var(--card);
+            padding: 1.8rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+        }
+
+        /* CONTACT */
+        .contact-box {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        footer {
+            padding: 3rem 1rem;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        /* THEME SWITCHER */
+        #themeToggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 999;
+            background: var(--card);
+            color: var(--text);
+            padding: 0.6rem 0.9rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-soft);
+            transition: 0.3s;
+        }
+
+        #themeToggle:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- THEME BUTTON -->
+    <button id="themeToggle"><i class="fas fa-moon"></i></button>
+
+    <!-- HERO SECTION -->
+    <header>
+        <div class="hero">
+            <img src="./_MG_1469.jpg" alt="Foto de Gustavo" />
+            <h1>Gustavo Barbosa</h1>
+            <p>Dashboards, insights e automações que geram impacto real no negócio.</p>
+
+            <div class="cta">
+                <a href="#portfolio" class="btn btn-primary"><i class="fa fa-eye"></i> Ver Portfólio</a>
+                <a href="#contato" class="btn btn-outline"><i class="fa fa-paper-plane"></i> Contato</a>
+                <a href="./Gustavo Barbosa.docx" download class="btn btn-outline"><i class="fa fa-file"></i> Baixar CV</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT / SKILLS -->
+    <section>
+        <h2 class="section-title">Habilidades & Tecnologias</h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>SQL Avançado</h3>
+                <p>Consultas complexas, otimização e modelagem eficiente.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+                <p>Análises, ETL, automações e machine learning básico.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Data Visualization</h3>
+                <p>Power BI, Tableau e visualizações com storytelling.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+        <h2 class="section-title">Experiência</h2>
+
+        <div class="experience-list">
+            <div class="exp-card">
+                <h3><strong>Natusfarma</strong> — Analista de Dados (2024 - Atual)</h3>
+                <ul>
+                    <li>Criação de dashboards estratégicos para áreas de negócios.</li>
+                    <li>ETL, SQL e Python para automação de processos.</li>
+                    <li>Monitoramento de KPIs e análises para decisões comerciais.</li>
+                </ul>
+            </div>
+
+            <div class="exp-card">
+                <h3><strong>Proluminas</strong> — Analista de Estoque (2020 - 2024)</h3>
+                <ul>
+                    <li>Curadoria de dados e análises avançadas de estoque.</li>
+                    <li>Segmentação de portfólio e melhoria operacional.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+        <h2 class="section-title">Projetos em Destaque</h2>
+
+        <div class="portfolio-grid">
+            
+            <div class="portfolio-item">
+                <img src="./Leveinstein.png">
+                <div class="portfolio-info">
+                    <h3>Classificação de Produtos (Levenshtein)</h3>
+                    <p>Reclassificação via similaridade de strings (distância de Levenshtein).</p>
+                    <div style="display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.5rem;">
+                        <span class="tag">Python</span>
+                        <span class="tag">String Matching</span>
+                        <span class="tag">Similaridade</span>
+                        <a class="btn btn-primary" href="https://github.com/Gusta765/Classificando-Produtos-Levenshtein-" target="_blank" rel="noopener">Ver GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="./Associacao.png">
+                <div class="portfolio-info">
+                    <h3>Associação Condicional de Produtos (SQL)</h3>
+                    <p>Regras condicionais em SQL para identificar associações e otimizar portfólio.</p>
+                    <div style="display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.5rem;">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Regras</span>
+                        <span class="tag">Eficiência</span>
+                        <a class="btn btn-primary" href="https://github.com/Gusta765/Associa-o_Condicional_SQL" target="_blank" rel="noopener">Ver GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="./Performance_Viagens.png" alt="Performance de Viagens - Logística">
+                <div class="portfolio-info">
+                    <h3>Performance de Viagens (Logística)</h3>
+                    <p>Painel logístico com KPIs de cumprimento, lead time, atrasos e eficiência por rota.</p>
+                    <div style="display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.5rem;">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Logística</span>
+                        <span class="tag">KPIs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="./Acompanhamento_Vendas.png" alt="Acompanhamento de Vendas - Lançamento">
+                <div class="portfolio-info">
+                    <h3>Acompanhamento de Vendas (Lançamento)</h3>
+                    <p>Dashboard de produto em lançamento com metas, funil, regiões e curva de adoção.</p>
+                    <div style="display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.5rem;">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Vendas</span>
+                        <span class="tag">Lançamento</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contato">
+        <h2 class="section-title">Contato</h2>
+        <div class="contact-box">
+            <p>Email: <strong>gustavobarbosa7744@gmail.com</strong></p>
+            <p>LinkedIn: <strong>linkedin.com/in/gustavo-barbosa-868976236/</strong></p>
+            <p>WhatsApp: <strong>(35) 98817-1660</strong></p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Gustavo Barbosa — Portfólio Profissional
+    </footer>
+
+<script>
+    // Inicialização do tema com persistência
+    (function() {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const icon = toggle.querySelector('i');
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initial = saved || (prefersDark ? 'dark' : 'light');
+      if (initial === 'dark') root.setAttribute('data-theme', 'dark');
+      function syncIcon() {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        toggle.setAttribute('aria-label', isDark ? 'Alternar para modo claro' : 'Alternar para modo escuro');
+      }
+      syncIcon();
+      toggle.addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          root.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+        } else {
+          root.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        }
+        syncIcon();
+      });
+    })();
+</script>
+
+</body>
+</html>
